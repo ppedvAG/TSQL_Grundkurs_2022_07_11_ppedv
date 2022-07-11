@@ -23,7 +23,7 @@ SELECT * FROM Orders WHERE EmployeeID IN(1, 2, 4); --Alle Order mit Employees 1,
 
 SELECT * FROM Customers WHERE Country = 'Germany'; --WHERE mit String
 
-SELECT * FROM Customers WHERE Country = 'Germany' AND City = 'Berlin';
+SELECT * FROM Customers WHERE Country = 'Germany' AND (City = 'Berlin' OR City = 'Köln'); --Klammern um rechten Ausdruck zuerst auszuwerten
 
 SELECT * FROM Customers WHERE Country = 'Germany' ORDER BY PostalCode DESC; --Sortiere alle deutschen Customer nach PLZ (absteigend durch DESC)
 
