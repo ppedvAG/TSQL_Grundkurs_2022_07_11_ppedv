@@ -14,6 +14,8 @@ SELECT * FROM Orders WHERE EmployeeID BETWEEN 1 AND 3; --EmployeeID zwischen 1 u
 
 SELECT * FROM Orders WHERE CONVERT(DATE, ShippedDate) BETWEEN '1997-01-01' AND '1997-12-31'; --Liegt mein Datum zwischen den zwei angegeben Daten?
 
+SELECT * FROM Orders WHERE ShippedDate BETWEEN '19970101' AND '19971231'; --Datumsvergleiche ohne Bindestriche zwischen Jahr/Monat/Tag
+
 SELECT * FROM Orders WHERE ShipCountry = 'Austria' OR ShipCountry = 'Germany' OR ShipCountry = 'Sweden'; --Lang und unübersichtlich#
 SELECT * FROM Orders WHERE ShipCountry IN('Austria', 'Germany', 'Sweden'); --Einfacher und übersichtlicher mit IN(...), entspricht mein ShipCountry einem der drei angegebenen Länder
 
