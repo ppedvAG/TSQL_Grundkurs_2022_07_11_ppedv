@@ -4,6 +4,8 @@ SELECT CompanyName, Address + ' ' + City + ', ' + PostalCode + ' ' + Country AS 
 
 SELECT CompanyName, CONCAT(Address, ' ', City, ', ', PostalCode, ' ', Country) AS [Volle Addresse] FROM Customers; --CONCAT statt einfache Stringverbindung mit +
 
+SELECT CompanyName, CONCAT_WS(' ', Address, PostalCode, City, Country) FROM Customers; --CONCAT_WS: Concat With Seperator, alle Parameter mit dem Seperator verbinden
+
 SELECT TRIM('    Test    '); --Schneidet Abstände links und rechts weg
 SELECT RTRIM('   Test    '); --Schneidet Abstände nur rechts weg
 SELECT LTRIM('      Test     '); --Schneidet Abstände nur links weg
