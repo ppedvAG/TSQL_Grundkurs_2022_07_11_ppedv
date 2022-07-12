@@ -7,7 +7,6 @@ SELECT SYSDATETIME(); --Jetztiges Datum, Nanosekundengenau
 /*
 Intervalle:
     year, yyyy, yy = Year
-    quarter, qq, q = Quarter (1-4)
     month, MM, M = month
     week, ww, wk = Week
     day, dd, d = Day
@@ -16,8 +15,10 @@ Intervalle:
     second, ss, s = Second
     millisecond, ms = Millisecond
 	nanosecond, ns
+
     weekday, dw, w = Weekday (1-7)
     dayofyear, dy, y = Day of the year (1-366)
+    quarter, qq, q = Quarter (1-4)
 */
 
 SELECT DATEADD(YEAR, 2, GETDATE()); --DATEADD: Intervall zu einem Datum hinzufügen
@@ -32,7 +33,7 @@ SELECT DATEADD(QUARTER, 1, GETDATE()); --Ein Quartal hinzufügen
 
 SELECT YEAR(GETDATE()); --Nur das Jahr vom Datum holen
 SELECT MONTH(GETDATE()); --Das gleiche nur mit Monat
---DAY, HOUR, MINUTE, SECOND
+SELECT DAY(GETDATE());
 
 SELECT DATEPART(YEAR, GETDATE()); --Teil eines Datums ausgeben, kann verwendet werden statt YEAR, MONTH, ...
 

@@ -4,11 +4,13 @@
 -- AND, OR Bedingungen verknüpfen
 -- NOT Bedingung invertieren
 
+USE Northwind;
+
 SELECT * FROM Orders WHERE Freight >= 50; --Orders mit Freight mindestens 50
 
 SELECT * FROM Orders WHERE Freight >= 50 AND EmployeeID != 4; --Freight mindestens 50 UND nicht Mitarbeiter mit ID 4
 
-SELECT * FROM Orders WHERE Freight >= 50 OR EmployeeID != 4; --Mindestens eine von beiden Bedingungen muss stimmen
+SELECT * FROM Orders WHERE Freight >= 50 OR EmployeeID = 4; --Mindestens eine von beiden Bedingungen muss stimmen
 
 SELECT * FROM Orders WHERE EmployeeID BETWEEN 1 AND 3; --EmployeeID zwischen 1 und 3 (1, 2, 3; Grenzen inkludiert)
 
@@ -16,7 +18,7 @@ SELECT * FROM Orders WHERE CONVERT(DATE, ShippedDate) BETWEEN '1997-01-01' AND '
 
 SELECT * FROM Orders WHERE ShippedDate BETWEEN '19970101' AND '19971231'; --Datumsvergleiche ohne Bindestriche zwischen Jahr/Monat/Tag
 
-SELECT * FROM Orders WHERE ShipCountry = 'Austria' OR ShipCountry = 'Germany' OR ShipCountry = 'Sweden'; --Lang und unübersichtlich#
+SELECT * FROM Orders WHERE ShipCountry = 'Austria' OR ShipCountry = 'Germany' OR ShipCountry = 'Sweden'; --Lang und unübersichtlich
 SELECT * FROM Orders WHERE ShipCountry IN('Austria', 'Germany', 'Sweden'); --Einfacher und übersichtlicher mit IN(...), entspricht mein ShipCountry einem der drei angegebenen Länder
 
 SELECT * FROM Orders WHERE EmployeeID IN(1, 2, 4); --Alle Order mit Employees 1, 2 oder 4

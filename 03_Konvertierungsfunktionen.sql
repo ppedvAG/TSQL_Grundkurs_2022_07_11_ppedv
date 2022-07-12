@@ -32,7 +32,6 @@ SELECT CONVERT(VARCHAR, GETDATE(), 4); --11.07.22
 /*
 Intervalle:
     year, yyyy, yy = Year
-    quarter, qq, q = Quarter (1-4)
     month, MM, M = month
     week, ww, wk = Week
     day, dd, d = Day
@@ -41,8 +40,10 @@ Intervalle:
     second, ss, s = Second
     millisecond, ms = Millisecond
 	nanosecond, ns
+
     weekday, dw, w = Weekday (1-7)
     dayofyear, dy, y = Day of the year (1-366)
+    quarter, qq, q = Quarter (1-4)
 */
 
 SELECT FORMAT(GETDATE(), 'yyyy-MM-dd'); --Datumsformat sehr präzise angeben

@@ -22,7 +22,7 @@ SELECT * FROM Customers WHERE ContactName LIKE '[a-d]%'; --Alle Customer mit Con
 
 SELECT * FROM Customers WHERE ContactName LIKE '[^a-d]%' ORDER BY ContactName;
 
-SELECT * FROM Customers WHERE ContactName LIKE '[a-c|x-z]%'; --Alle Customer von A-C oder X-Z (Mehrere Ranges gleichzeitig
+SELECT * FROM Customers WHERE ContactName LIKE '[a-c|x-z]%'; --Alle Customer von A-C oder X-Z (Mehrere Ranges gleichzeitig)
 
 SELECT * FROM Customers WHERE PostalCode LIKE '[0-9][0-9][0-9][0-9]'; --PIN abfragen
 
