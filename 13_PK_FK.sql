@@ -26,4 +26,4 @@ INSERT INTO PKTest VALUES
 
 INSERT INTO FKTest VALUES ('Test'); --Datensatz mit ID 1 hinzugefügt
 INSERT INTO PKTest VALUES
-('Test', 'Test', 1); --Jetzt möglich da Datensatz mit ID 1 in anderer Tabelle
+('Test', 'Test', 1, '18000101'); --Jetzt möglich da Datensatz mit ID 1 in anderer Tabelle
