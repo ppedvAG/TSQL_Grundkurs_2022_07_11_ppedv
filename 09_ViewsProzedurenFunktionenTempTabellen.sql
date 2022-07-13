@@ -72,6 +72,9 @@ GO
 EXEC p_OrdersByDate @StartDate = '19970101', @EndDate = '19971231';
 GO
 
+--Prozedur einfach nur mit dem Namen aufrufen
+p_Test;
+
 --Prozedur löschen
 DROP PROC p_OrdersByDate;
 GO;
