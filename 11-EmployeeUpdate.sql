@@ -1,5 +1,5 @@
 ALTER TABLE Employees ADD Salary MONEY;
-GO;
+GO
 UPDATE Employees SET Salary = 2500 WHERE EmployeeID = 1;
 UPDATE Employees SET Salary = 8000 WHERE EmployeeID = 2;
 UPDATE Employees SET Salary = 1800 WHERE EmployeeID = 3;
