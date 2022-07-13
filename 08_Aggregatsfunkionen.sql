@@ -14,8 +14,8 @@ SELECT Country, COUNT(*) AS Anzahl FROM Customers GROUP BY Country;
 SELECT Quantity, COUNT(*) AS Anzahl FROM [Order Details] GROUP BY Quantity ORDER BY Anzahl DESC; --Anzahl Bestellungen pro Menge ausgeben
 
 SELECT 
-MAX(Freight) AS TeuersteBestellung, --MIN: kleinster Wert der Spalte
-MIN(Freight) AS BilligsteBestellung, --MAX: größter Wert der Spalte
+MIN(Freight) AS BilligsteBestellung, --MIN: kleinster Wert der Spalte 
+MAX(Freight) AS TeuersteBestellung, --MAX: größter Wert der Spalte
 AVG(Freight) AS Durchschnittskosten, --AVG: Durchschnittlicher Wert der Spalte
 SUM(Freight) AS Gesamtkosten --SUM: Summe der Spalte
 FROM Orders;
@@ -24,6 +24,8 @@ SELECT TOP 1 Freight FROM Orders ORDER BY Freight; --MIN
 SELECT TOP 1 Freight FROM Orders ORDER BY Freight DESC; --MAX
 
 SELECT Country, City FROM Customers GROUP BY City, Country; --Alle Stadt/Land Kombinationen ausgeben
+
+SELECT Country, City, COUNT(*) AS Anzahl FROM Customers GROUP BY City, Country ORDER BY Anzahl DESC; --Customer pro Land/Stadt Kombination ausgeben
 
 SELECT EmployeeID, COUNT(*) AS AnzBestellungen FROM Orders GROUP BY EmployeeID; --Anzahl Bestellungen pro Employee ausgeben
 
